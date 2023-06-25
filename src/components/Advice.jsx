@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 
-import Divider from "/public/images/pattern-divider-desktop.svg";
-import Dice from "/public/images/icon-dice.svg";
+import Divider from "../images/pattern-divider-desktop.svg";
+import Dice from "../images/icon-dice.svg";
 
 const Advice = ({ quote, handleClick }) => {
   const { id = "", advice = "" } = quote;
@@ -11,9 +11,9 @@ const Advice = ({ quote, handleClick }) => {
       <div className="advice-header">Advice #{id}</div>
       <div className="advice-quote">{`"${advice}"`}</div>
 
-      <img className="advice-divider" src={Divider} />
+      <img className="advice-divider" src={Divider} alt="divider" />
       <div className="advice-dice" onClick={handleClick}>
-        <img src={Dice} />
+        <img src={Dice} alt="dice" />
       </div>
     </div>
   );
