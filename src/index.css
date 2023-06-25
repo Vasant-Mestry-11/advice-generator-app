@@ -1,0 +1,116 @@
+:root {
+  /* Breakpoints */
+  --mobile-layout: "375px";
+  --desktop-layout: "1440px";
+
+  /* Colors */
+  --primary-light-cyan: hsl(193, 38%, 86%);
+  --primary-neon-green: hsl(150, 100%, 66%);
+
+  --neutral-grayish-blue: hsl(217, 19%, 38%);
+  --dark-grayish-blue: hsl(217, 19%, 24%);
+  --dark-blue: hsl(218, 23%, 16%);
+
+  /* Typography */
+  --body-font: "Manrope", sans-serif;
+  --default-fs: "28px";
+  --default-fw: 800;
+
+  font-family: var(--body-font);
+  line-height: 1.5;
+  font-weight: var(--default-fw);
+
+  color: var(--primary-light-cyan);
+  background-color: var(--dark-blue);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.app {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 94vh;
+  text-align: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+
+.attribution a {
+  color: var(--primary-neon-green);
+}
+
+.advice-container {
+  max-width: 30rem;
+  min-height: 17rem;
+  background-color: var(--dark-grayish-blue);
+  border-radius: 1rem;
+  position: relative;
+  padding: 2rem 3rem;
+}
+
+.advice-header {
+  color: var(--primary-neon-green);
+  font-weight: var(--default-fw);
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 12px;
+}
+
+.advice-quote {
+  font-size: 1.2rem;
+  word-wrap: break-word;
+  margin-top: 1.5rem;
+  min-height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.advice-divider {
+  width: 100%;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.advice-dice {
+  height: 4rem;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--primary-neon-green);
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 50%);
+  cursor: pointer;
+}
+
+.advice-dice:hover {
+  filter: drop-shadow(0 0 15px var(--primary-neon-green));
+  transition: filter 0.2s ease-in-out;
+}
+
+@media (max-width: 375px) {
+  .advice-container {
+    margin: 1rem;
+  }
+
+  .advice-dice {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
+}
